@@ -28,9 +28,7 @@ authRouter.post('/register', async (req, res) => {
         if (err) {
           res.status(500).send({ message: 'Error occurred' });
         } else {
-          res
-            .status(201)
-            .send({ message: 'user register successfully', success });
+          res.status(201).send({ message: 'user register successfully' });
         }
       })
     : res.status(201).send({ message: 'email already exhist ' });
