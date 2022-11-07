@@ -6,8 +6,9 @@ const questionSchema = mongoose.Schema({
   option3: { type: String, require: true },
   option4: { type: String, require: true },
   answer: { type: Number, require: true },
-  label: { type: Number, require: true },
+  level: { type: Number, require: true },
   userId: { type: String, require: true },
+  quistId: { type: String, require: true },
 });
 let QuestionModel = mongoose.model('question', questionSchema);
 
