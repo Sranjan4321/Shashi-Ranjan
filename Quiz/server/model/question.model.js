@@ -8,7 +8,7 @@ const questionSchema = mongoose.Schema({
   answer: { type: Number, require: true },
   level: { type: Number, require: true },
   userId: { type: String, require: true },
-  quistId: { type: String, require: true },
+  quizId: { type: String, require: true },
 });
 let QuestionModel = mongoose.model('question', questionSchema);
 

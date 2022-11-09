@@ -21,7 +21,7 @@ function App() {
           path="/adminpage/createlink"
           element={token ? <CreateQuizLink /> : <Login />}
         />
-        <Route path="/quiz/:id/:userid" element={<Quiz />} />
+        <Route path="/quiz/:id" element={<Quiz />} />
       </Routes>
     </div>
   );

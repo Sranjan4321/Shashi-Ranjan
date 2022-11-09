@@ -3,7 +3,6 @@ const jwt = require('jsonwebtoken');
 const AdminModel = require('../model/admin.model');
 AdminRouter.post('/register', async (req, res) => {
   let { email } = req.body;
-  console.log(req.body);
   let IsExistUser = await AdminModel.findOne({ email });
   if (IsExistUser) {
     return res.send({ message: 'user already Exist' });

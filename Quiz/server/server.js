@@ -4,6 +4,7 @@ const cors = require('cors');
 const connection = require('./connect/connect');
 const AdminRouter = require('./router/admin.router');
 const QuestionRouter = require('./router/question.route');
+const QuizRouter = require('./router/quiz.router');
 require('dotenv').config();
 const PORT = process.env.PORT || 8000;
 app.use(express.json());
@@ -13,6 +14,7 @@ app.get('/', (req, res) => {
 });
 app.use(AdminRouter);
 app.use(QuestionRouter);
+app.use(QuizRouter);
 app.listen(PORT, async () => {
   try {
     await connection;
