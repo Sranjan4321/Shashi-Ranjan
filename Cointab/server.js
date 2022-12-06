@@ -3,11 +3,14 @@ const app = express();
 require('dotenv').config();
 const connection = require('./config/database');
 const PORT = process.env.PORT || 5000;
-
+const router = require('./router/User.route');
+app.use(express.json());
 app.get('/', (req, res) => {
   res.send('homepage');
 });
+app.use('/user', router);
 //listen server
+
 app.listen(PORT, async () => {
   try {
     await connection;
